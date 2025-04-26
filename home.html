@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Trip</title>
+  </head>
+
+  <body>
+    <div class="title d-flex justify-content-between align-items-center px-5 x">
+      <h1 class="text-center py-4 mb-0">🌴 Far away 💼</h1>
+      <button class="btn btn-info">
+        <a href="./index.html" class="text-white text-decoration-none">
+          logout
+        </a>
+      </button>
+    </div>
+    <div class="input_Form">
+      <div class="container d-flex py-4 flex-column flex-md-row">
+        <label for="item_value text-center" class="h3">
+          What do your need for your trip ? 😍
+        </label>
+        <input
+          id="itemName"
+          class="form-control w-100 w-md-25 w-lg-50 ms-lg-4 me-1"
+          type="text"
+          placeholder="Item..."
+        />
+        <button id="addBtn" class="btn btn_add d-block">Add</button>
+        <button id="updateBtn" class="btn bg-warning d-none">Update</button>
+      </div>
+    </div>
+
+    <div class="lists py-4">
+      <input
+        id="searchInput"
+        type="search"
+        class="form-control w-50 mx-auto mb-4"
+        placeholder="search item "
+      />
+      <div class="container">
+        <table class="table text-white">
+          <thead>
+            <th>Index</th>
+            <th>Item</th>
+            <th>Delete</th>
+            <th>Update</th>
+          </thead>
+          <tbody id="data"></tbody>
+        </table>
+      </div>
+      <p class="h5 py-4 text-white w-100 w-md-25 text-center"></p>
+    </div>
+
+    <div
+      class="alertContainer position-fixed top-0 end-0 start-0 bottom-0 d-none"
+    >
+      <div class="alertItem w-25 bg-white mx-auto p-2 mt-3">
+        <div class="d-flex justify-content-between border-bottom p-4">
+          <div class="d-flex gap-2">
+            <div class="circle red"></div>
+            <div class="circle yellow"></div>
+            <div class="circle green"></div>
+          </div>
+
+          <i id="close" class="fa-solid fa-x"></i>
+        </div>
+        <p id="alertMsg" class="pt-3 ps-3">errorrrrrr</p>
+      </div>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./js/home.js"></script>
+  </body>
+</html>
